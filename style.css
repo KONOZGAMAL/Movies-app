@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#22254b;
+    --secondary-color:#373b69; 
+}
+body{
+    width: 100%;
+    background: #666;
+    font-family: sans-serif;
+    background-color: var(--primary-color);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5rem;
+   background: var(--secondary-color);
+   z-index: 99;
+}
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navBar h2{
+    font-size: 53px;
+    color: #eee;
+}
+.navBar h2 span{
+    padding: 10px;
+    font-size: 40px;
+}
+#form{
+  background: #fff;
+  padding:0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+}
+#form input{
+    border: none;
+}
+#form input:focus {
+    outline: none;
+  }
+  .movie{
+   width: 100%;
+   height: 100vh;
+   margin: auto;
+   display: flex;
+   align-items: center;
+  justify-content: center;
+   flex-wrap: wrap;
+   padding: 100px 0px;
+  }
+  .card{
+    flex-basis: 20%;
+    text-align: center;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0,0.1);
+    margin: 15px;
+    background: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+  }
+  .card img{
+    width: 100%;
+  }
+  .movie-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    color: #eee;
+  }
+  .movie-info h3{
+    margin-top: 0;
+  }
+  .movie-info span{
+    background: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 2rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+  }
+  .card:hover .overview{
+    transform: translateY(0);
+    cursor: pointer;
+  }
+  /* //////////// Media Query //////////////// */
+
+/* Media Query 991px */
+@media (max-width: 991px) {
+  header{
+    padding: 1rem;
+}
+  .navBar h2{
+    font-size: 43px;
+}
+.navBar h2 span{
+  font-size: 32px;
+}
+.movie{
+  padding: 90px 0px;
+ }
+.card{
+  flex-basis: 25%;
+}
+}
+/* Media Query 767px */
+@media screen and (max-width: 768px) {
+  .navBar h2{
+    font-size: 33px;
+}
+.navBar h2 span{
+  font-size: 28px;
+}
+#form{
+  padding:0.5rem;
+}
+.card{
+  flex-basis: 40%;
+}
+}
+/* Media Query 590px */
+@media (max-width: 590px) {
+  .navBar h2{
+    font-size: 23px;
+}
+.navBar h2 span{
+  font-size: 20px;
+}
+/* .navBar h2{
+  display: none;
+} */
+#form{
+ display: none;
+}
+.card{
+  flex-basis: 100%;
+}
+}
